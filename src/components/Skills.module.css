@@ -1,0 +1,36 @@
+.skills {
+  padding: 8rem 6vw;
+  background: var(--bg2);
+  position: relative;
+  z-index: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.2rem 0.8rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: border-color 0.25s, color 0.25s, transform 0.25s, box-shadow 0.25s;
+  text-align: center;
+}
+.chip:hover {
+  border-color: var(--purple-light);
+  color: var(--text);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
+}
+
+.icon { font-size: 1.6rem; }

@@ -1,0 +1,29 @@
+.footer {
+  padding: 2rem 6vw;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  position: relative;
+  z-index: 1;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.links a,
+.footer a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.links a:hover,
+.footer a:hover {
+  color: var(--purple-light);
+}

@@ -1,0 +1,75 @@
+.about {
+  padding: 8rem 6vw;
+  position: relative;
+  z-index: 1;
+}
+
+.header { margin-bottom: 3.5rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.text p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+.text p strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* education */
+.eduBlock { margin-top: 2rem; }
+.eduItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.eduDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.eduTitle { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.1rem; }
+.eduSub   { font-size: 0.82rem; color: var(--muted); }
+
+/* stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.statCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.4rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.statCard:hover {
+  border-color: var(--purple-light);
+  transform: translateY(-3px);
+}
+.statNum {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--purple-light);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.statLabel { font-size: 0.82rem; color: var(--muted); }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
