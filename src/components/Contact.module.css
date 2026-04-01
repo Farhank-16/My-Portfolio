@@ -46,6 +46,23 @@
   color: var(--purple-light);
 }
 
+.contactIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: background 0.25s, border-color 0.25s;
+}
+.card:hover .contactIcon {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: var(--purple-light);
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -120,6 +137,34 @@
 .toastShow {
   transform: none;
   opacity: 1;
+}
+
+.toastError {
+  border-color: #f87171;
+  box-shadow: 0 8px 32px rgba(248, 113, 113, 0.2);
+}
+
+/* Spinner inside button */
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.spinner::after {
+  content: '';
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
 }
 
 @media (max-width: 600px) {

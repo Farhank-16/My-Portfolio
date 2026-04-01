@@ -1,20 +1,22 @@
 import styles from './Skills.module.css'
 
+const CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons'
+
 const skills = [
-  { icon: '⚛️', name: 'React.js'    },
-  { icon: '🟢', name: 'Node.js'     },
-  { icon: '🚂', name: 'Express.js'  },
-  { icon: '🍃', name: 'MongoDB'     },
-  { icon: '🟨', name: 'JavaScript'  },
-  { icon: '🌐', name: 'HTML5'       },
-  { icon: '🎨', name: 'CSS3'        },
-  { icon: '💨', name: 'Tailwind'    },
-  { icon: '🔌', name: 'REST API'    },
-  { icon: '🔀', name: 'Socket.io'   },
-  { icon: '🐙', name: 'GitHub'      },
-  { icon: '📬', name: 'Postman'     },
-  { icon: '🔑', name: 'JWT'         },
-  { icon: '💻', name: 'VS Code'     },
+  { name: 'React.js',    icon: `${CDN}/react/react-original.svg`                },
+  { name: 'Node.js',     icon: `${CDN}/nodejs/nodejs-original.svg`              },
+  { name: 'Express.js',  icon: `${CDN}/express/express-original.svg`,  invert: true },
+  { name: 'MongoDB',     icon: `${CDN}/mongodb/mongodb-original.svg`            },
+  { name: 'JavaScript',  icon: `${CDN}/javascript/javascript-original.svg`      },
+  { name: 'HTML5',       icon: `${CDN}/html5/html5-original.svg`                },
+  { name: 'CSS3',        icon: `${CDN}/css3/css3-original.svg`                  },
+  { name: 'Tailwind',    icon: `${CDN}/tailwindcss/tailwindcss-original.svg`    },
+  { name: 'MySQL',       icon: `${CDN}/mysql/mysql-original.svg`                },
+  { name: 'GitHub',      icon: `${CDN}/github/github-original.svg`,    invert: true },
+  { name: 'Postman',     icon: `${CDN}/postman/postman-original.svg`            },
+  { name: 'VS Code',     icon: `${CDN}/vscode/vscode-original.svg`              },
+  { name: 'Git',         icon: `${CDN}/git/git-original.svg`                    },
+  { name: 'JWT',         icon: 'https://jwt.io/img/favicon/favicon-32x32.png'   },
 ]
 
 export default function Skills() {
@@ -29,7 +31,11 @@ export default function Skills() {
       <div className={`${styles.grid} reveal`}>
         {skills.map((s) => (
           <div key={s.name} className={styles.chip}>
-            <span className={styles.icon}>{s.icon}</span>
+            <img
+              src={s.icon}
+              alt={s.name}
+              className={`${styles.icon} ${s.invert ? styles.invert : ''}`}
+            />
             {s.name}
           </div>
         ))}
